@@ -1,8 +1,10 @@
-# MERGE TIME MACHINE FOLDERS TO A SINGLE FOLDER DIRECTORY
-
-If you use recovery software to extract a Time Machine drive, you may need to flatten it down to just a single folder with all the recovered data. 
+# MERGE TIME MACHINE FOLDERS TO A SINGLE FOLDER / DIRECTORY
 **For functional Time Machine drives, you should just be able to copy the most recent backup using the Finder, which will then do all the necesary recursion for you.**
+
+If you use recovery software to extract a Time Machine drive, you may need to flatten it down to just a single folder with all the recovered data inside. 
+
 cd into the Root TM backups folder (or root drive if there is no root folder) 
+
 You should have a bunch of folders That look something like below: 
 
 /Root
