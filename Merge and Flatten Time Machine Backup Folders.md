@@ -5,15 +5,15 @@ If you use recovery software to extract a Time Machine drive, you may need to fl
 
 cd into the Root TM backups folder (or root drive if there is no root folder) 
 
-You should have a bunch of folders That look something like below: 
+You should have a bunch of folders That look something like below:  
 
-/Root
-	/2021-9-25-12345.previous
-	/2021-9-26-67890.previous
-	/2021-9-29-98765.previous
+/2021-9-25-12345.previous  
+/2021-9-26-67890.previous  
+/2021-9-29-98765.previous  
+...
 
 Then Run:
-cp -pR *.previous/ /Volumes/output/folder
+```cp -pR *.previous/ /Volumes/output/folder```
 
 The key part is the slash after "previous", which will copy the folder contents, instead of the folder itself.
 -n is no overwrites. If you use this, you'll skip over any updated copies of files that appear in later backup folders. Will speed things up though.
