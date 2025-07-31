@@ -1,14 +1,12 @@
 # docs
-Useful command line tools with the relevant switches I use for certain jobs. Mostly Macs, but maybe some other Unix / Linux stuff.
+Useful command line tools with the relevant switches I use for certain jobs. Mostly Macs, but maybe some other Unix / Linux stuff.  
 
-cp -R /var/www /new/folder 
-Avoid the extra forward slash at the end of the path name.
-
-If you add a slash to the end of the source directory, it will copy the contents from the folder
-
-To copy a whole Mac Disk Use:
-
-sudo cp -pR /Volumes/Macintosh\ HD/ /Volumes/NewDisk
+```cp -R /var/www /new/folder ```  
+Avoid the extra forward slash at the end of the path name.  
+If you add a slash to the end of the source directory, it will copy the contents from the folder  
+  
+To copy a whole Mac Disk Use:  
+```sudo cp -pR /Volumes/Macintosh\ HD/ /Volumes/NewDisk```  
 
 Note the slash after HD, which you'll need to add if you drop the volume into the terminal window. If you don't add the slash, you'll end up with a Macintosh HD folder inside NewDisk. There is no slash after NewDisk.
 
@@ -90,11 +88,11 @@ xcopy "C:\Important Files" D:\Backup /c /d /e /h /i /k /q /r /s /x /y
 Life's too short to explain all those switches :-/
 
 
-TIDY MAC FILE LISTS:
-ls -hR [drag folder here] > JOBNUMBER.txt
+TIDY MAC FILE LISTS:  
+```ls -hR [drag folder here] > JOBNUMBER.txt```
 
-FIND EMPTY OR BLANK FILES IN LINUX
-find ~/list \( -empty -o \( -type f -a ! -exec grep -qm1 '[^[:blank:]]' {} \; \) \) -exec ls -Fd {} \;
+FIND EMPTY OR BLANK FILES IN LINUX  
+```find ~/list \( -empty -o \( -type f -a ! -exec grep -qm1 '[^[:blank:]]' {} \; \) \) -exec ls -Fd {} \;```
 
 CAN ALSO BE PIPED TO A LIST:
 find ~/list \( -empty -o \( -type f -a ! -exec grep -qm1 '[^[:blank:]]' {} \; \) \) -exec ls -Fd {} \; >ZEROFILES.txt
@@ -113,3 +111,9 @@ If you want the same number of lines before and after you can use -C num.
 
 grep -C 3 foo README.txt
 This will show 3 lines before and 3 lines after.
+
+***************************************************
+That annoying thing where Mac won't eject an external disk. (It's usually spotlight)  
+```lsof /Volumes/USB```  
+or  
+```sudo lsof /Volumes/USB```  
