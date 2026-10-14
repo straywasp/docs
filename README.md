@@ -109,6 +109,12 @@ If you want the same number of lines before and after you can use -C num.
 This will show 3 lines before and 3 lines after.
 
 ***************************************************
+## GREP FOR HEX  
+Useful when searching for hex contents in a bunch of files. First CD into directory to scan.
+
+```grep -r '\xe5\xe5' *```
+
+***************************************************
 ## That annoying thing where Mac won't eject an external disk. (It's usually spotlight)  
 ```lsof /Volumes/USB```  
 or  
